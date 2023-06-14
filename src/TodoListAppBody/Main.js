@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
-import TextField from '@mui/material/TextField'
+import "./Main.scss";
+import TextField from '@mui/material/TextField';
 
 export default function Main() {
     const [message, setMessage] = useState("");
@@ -17,26 +18,35 @@ export default function Main() {
     }
     return (
         <div>
-            <h1>TODO LIST APP</h1>
-            <form onSubmit={handleSubmit}>
-                <TextField
-                    className='type'
-                    placeholder="what do you wanna do today?"
-                    variant="outlined"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                />
-                <input
-                    type="submit"
-                    hidden
-                />
-            </form>
-            {list.map((a,i) => (<div className='messageList'>
-                <ul key={i}>
-                   {i}{a.message}
-                </ul>
-            </div>))
-            }
-        </div>
-    )
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                        <link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet"/>
+                        </head>
+                        <fieldset className='allAround'>
+                            <h1 className='headText'>&lt;TODO LIST APP /&gt;</h1>
+                            <form onSubmit={handleSubmit}>
+                                <TextField
+                                    className='textOut'
+                                    placeholder="Bro!! Anything you wanna do today?"
+                                    variant="outlined"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                /> 
+                                <input
+                                    type="submit"
+                                    hidden
+                                />
+                            </form>
+                            &nbsp;
+                            {list.map((a) => (<div className='messageList'>
+                                <ul>
+                                    {a.message}
+                                </ul>
+                            </div>))
+                            }
+                        </fieldset>
+
+                    </div>
+                    )
 }

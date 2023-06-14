@@ -1,10 +1,25 @@
-$theWidth: 50%;
+
+$theWidth: 75%;
 $theHeight: 50%;
+ $theFont:'Moirai One', cursive;
+
 
 .messageList{
+    border-style: groove;
+    border-radius:25px;
     width: $theWidth;
-    height:$theHeight
+    margin: auto;
+    font-size: large;
+    padding-bottom: 5px;
 }
-.type{
+.textOut{
     width: $theWidth;
+}
+.allAround{
+    width:$theWidth;
+    height: 600px;
+    margin: auto;
+} 
+.headText{
+    font-family: $theFont;
 }
